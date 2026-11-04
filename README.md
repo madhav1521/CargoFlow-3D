@@ -64,33 +64,6 @@ The **100% Loaded** and **0% Empty** options are shipment states: they load the 
 - **Fits alone** is a per-carton-type estimate with the container dedicated to that single size. It is not additive across types.
 - The 3D preview is limited to 20,000 cartons and 2,000,000 packing cells. Plans exceeding these limits are rejected with an on-screen validation message.
 
-## Project structure
-
-```text
-app/
-├── components/
-│   ├── simulation/                 # Page-level UI sections
-│   │   ├── carton-inventory-panel.tsx
-│   │   ├── dashboard-header.tsx
-│   │   ├── dimension-panel.tsx
-│   │   ├── load-summary.tsx
-│   │   └── simulation-workspace.tsx
-│   ├── svg-icon.tsx                # Shared inline SVG icons
-│   └── truck-viewer.tsx            # Three.js loading-bay scene and animation
-├── constants/
-│   └── simulation.ts               # UI configuration and animation timing
-├── hooks/
-│   └── use-truck-simulation.ts     # Simulation state and actions
-├── types/
-│   └── simulation.ts               # Shared UI and state types
-├── utils/
-│   └── carton-inventory.ts         # Input parsing, validation, summaries
-├── globals.css                     # Application styles
-├── layout.tsx                      # Root layout and metadata
-├── page.tsx                        # Application composition root
-└── truck-spec.ts                   # Carton packing types, defaults, and planner
-```
-
 ## Technology
 
 - [Next.js](https://nextjs.org/docs) App Router
